@@ -4,6 +4,54 @@
   <div class="bg-white rounded-lg shadow-lg p-8 w-full max-w-md">
     <h1 class="text-2xl font-bold text-center mb-8">Contador de Respostas</h1>
 
+    <div class="mb-6">
+      <label class="block text-gray-700 text-sm font-bold mb-2" for="nome">
+        Nome do Contador
+      </label>
+      <input
+        id="nome"
+        type="text"
+        [(ngModel)]="nomeContador"
+        class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+        placeholder="Digite o nome do contador"
+      />
+    </div>
+
+    <div class="mb-6">
+      <label
+        class="block text-gray-700 text-sm font-bold mb-2"
+        for="disciplina"
+      >
+        Disciplina
+      </label>
+      <select
+        id="disciplina"
+        [(ngModel)]="disciplinaSelecionada"
+        class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+      >
+        <option value="">Selecione uma disciplina</option>
+        <option *ngFor="let disciplina of disciplinas" [value]="disciplina">
+          {{ disciplina }}
+        </option>
+      </select>
+    </div>
+
+    <div class="mb-6">
+      <label
+        class="block text-gray-700 text-sm font-bold mb-2"
+        for="observacao"
+      >
+        Observação
+      </label>
+      <textarea
+        id="observacao"
+        [(ngModel)]="observacao"
+        class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+        rows="3"
+        placeholder="Digite uma observação"
+      ></textarea>
+    </div>
+
     <div class="flex justify-between mb-8">
       <div class="text-center">
         <p class="text-4xl font-bold text-green-600">{{ acertos }}</p>
@@ -15,7 +63,7 @@
       </div>
     </div>
 
-    <div class="flex gap-4">
+    <div class="flex gap-4 mb-6">
       <button
         (click)="incrementarAcertos()"
         class="flex-1 bg-green-500 hover:bg-green-600 text-white font-bold py-2 px-4 rounded transition-colors"
@@ -29,5 +77,12 @@
         Errei
       </button>
     </div>
+
+    <button
+      (click)="salvarContador()"
+      class="w-full bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded transition-colors"
+    >
+      Salvar Contador
+    </button>
   </div>
 </div>
