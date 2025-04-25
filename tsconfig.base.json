@@ -18,6 +18,7 @@
       "@pontuei/exercises-data-access": [
         "modules/data-access/exercises/src/index.ts"
       ],
+      "@pontuei/exercises-ui": ["modules/ui/exercises/src/index.ts"],
       "@pontuei/home": ["modules/feature/home/src/index.ts"],
       "@pontuei/layout": ["modules/feature/layout/src/index.ts"]
     }
