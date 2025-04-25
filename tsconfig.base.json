@@ -15,6 +15,9 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
+      "@pontuei/exercises-data-access": [
+        "modules/data-access/exercises/src/index.ts"
+      ],
       "@pontuei/home": ["modules/feature/home/src/index.ts"],
       "@pontuei/layout": ["modules/feature/layout/src/index.ts"]
     }
