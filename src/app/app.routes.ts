@@ -10,4 +10,9 @@ export const appRoutes: Route[] = [
     path: 'home',
     loadChildren: () => import('@pontuei/home').then((m) => m.homeRoutes),
   },
+  {
+    path: 'question',
+    loadChildren: () =>
+      import('@pontuei/question').then((m) => m.questionRoutes),
+  },
 ];
