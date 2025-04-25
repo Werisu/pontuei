@@ -15,7 +15,16 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@pontuei/layout": ["modules/feature/layout/src/index.ts"]
+      "@pontuei/exercises-data-access": [
+        "modules/data-access/exercises/src/index.ts"
+      ],
+      "@pontuei/exercises-ui": ["modules/ui/exercises/src/index.ts"],
+      "@pontuei/home": ["modules/feature/home/src/index.ts"],
+      "@pontuei/layout": ["modules/feature/layout/src/index.ts"],
+      "@pontuei/question": ["modules/feature/question/src/index.ts"],
+      "@pontuei/question-data-access": [
+        "modules/data-access/question/src/index.ts"
+      ]
     }
   },
   "exclude": ["node_modules", "tmp"]
